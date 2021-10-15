@@ -1,0 +1,162 @@
+.wiki__container {
+  font-family: Franklin "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  width: 100%;
+  z-index: -1;
+}
+
+.wiki__nav-container {
+  height: 90px;
+}
+
+.wiki__container-animation {
+  @extend %wiki__box-container;
+  margin-top: 20px !important;
+  transition: margin-top 1s;
+}
+
+.wiki__container-animation--small {
+  @extend %wiki__box-container;
+  margin-top: 0px !important;
+  height: 50px;
+  border: 2px solid black !important;
+  transition: margin-top 1s, height 1s;
+}
+
+.wiki__button--container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.wiki__box-container,
+%wiki__box-container {
+  background-color: $white;
+  border: 5px solid $black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30vh auto 0;
+  padding: 16px;
+  width: 60%;
+
+  @media (max-width: $s-breakpoint) {
+    width: calc(100% - 20px);
+    margin: 20vh auto 0;
+  }
+}
+
+.wiki__search-input {
+  border: 3px solid $wiki-blue;
+  border-radius: 20px;
+  color: $wiki-blue;
+  font-size: 14px;
+  height: 40px;
+  margin: 12px 10px 10px;
+  padding: 6px 4px;
+  text-align: center;
+  width: 100%;
+
+  &:focus {
+    box-shadow: 0 0 8px $input-focus;
+    outline: none;
+  }
+
+  @media (max-width: $xs-breakpoint) {
+    border: 2px solid $wiki-blue;
+    border-radius: 14px;
+    font-size: 12px;
+    height: 28px;
+  }
+}
+
+.wiki__search-clear-btn {
+  background: $white;
+  color: $wiki-blue;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 23px;
+
+  @media (max-width: $xs-breakpoint) {
+    font-size: 16px;
+    top: 17px;
+    right: 16px;
+  }
+}
+
+.wiki__search-container {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+
+  @media (max-width: $xs-breakpoint) {
+    width: 100%;
+    height: 50px;
+  }
+}
+
+.wiki__search-btn {
+  cursor: pointer;
+  height: 60px;
+  left: 50%;
+  margin: 5px 5px 5px -30px;
+  position: absolute;
+  top: 0;
+  width: 60px;
+  z-index: 2;
+
+  @media (max-width: $xs-breakpoint) {
+    height: 40px;
+    margin: 5px 5px 5px -20px;
+    width: 40px;
+  }
+}
+
+.wiki__search-btn--small {
+  @extend .wiki__search-btn;
+  position: relative;
+}
+
+.wiki__text {
+  color: $wiki-blue;
+  font-family: "Franklin Gothic", sans-serif !important;
+  font-size: 18px;
+  margin: 0 !important;
+  text-align: center;
+
+  @media (max-width: $s-breakpoint) {
+    font-size: 13px;
+  }
+}
+
+.wiki__text > a {
+  color: $wiki-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $grey;
+  }
+}
+
+.wiki__search-results-container {
+  margin: 0 auto;
+  width: 80%;
+  padding-bottom: 30px;
+
+  @media (max-width: $xs-breakpoint) {
+    width: 100%;
+  }
+}
+
+.wiki__pagination-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
