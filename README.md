@@ -19,7 +19,7 @@ To install the application you will need to clone the repository by running `git
 
 ## Usage
 
-To application can be accessed through [this](FIXME) link (FIXME). You can alternatively view the application by cloning or downloading it with the method above.
+To application can be accessed through [this](https://wiki-api-search.netlify.app/) link (https://wiki-api-search.netlify.app/). You can alternatively view the application by cloning or downloading it with the method above.
 
 ## Technologies
 
