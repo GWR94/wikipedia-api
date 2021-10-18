@@ -213,15 +213,15 @@ const WikipediaAPI: FC = (): JSX.Element => {
               <Article key={result.pageid} {...result} />
             )
           )}
-          {resultsLength > 10 && max < 50 && (
-            <div className="wiki__button--container">
-              <Button
-                color="danger"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                style={{ margin: "5px 3px" }}
-              >
-                Back to Top
-              </Button>
+          <div className="wiki__button--container">
+            <Button
+              color="danger"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              style={{ margin: "5px 3px" }}
+            >
+              Back to Top
+            </Button>
+            {resultsLength > 10 && max < 50 && (
               <Button
                 onClick={() => setState({ ...state, max: max + 10 })}
                 color="info"
@@ -229,8 +229,8 @@ const WikipediaAPI: FC = (): JSX.Element => {
               >
                 Load More Results
               </Button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
     </div>
