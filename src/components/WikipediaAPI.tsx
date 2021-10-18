@@ -2,7 +2,6 @@ import { FC, useState, useEffect } from "react";
 import Article from "./Article";
 import { WikiState } from "../interfaces/wikipediaAPI.i";
 import { ArticleProps } from "../interfaces/article.i";
-import PageControl from "./PageControl";
 import searchImg from "../images/searchImg.png";
 import { useMediaQuery } from "beautiful-react-hooks";
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -219,15 +218,14 @@ const WikipediaAPI: FC = (): JSX.Element => {
               <Button
                 color="danger"
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                outline
-                style={{ margin: "5px 3px 0" }}
+                style={{ margin: "5px 3px" }}
               >
                 Back to Top
               </Button>
               <Button
                 onClick={() => setState({ ...state, max: max + 10 })}
                 color="info"
-                style={{ margin: "5px 3px 0" }}
+                style={{ margin: "5px 3px" }}
               >
                 Load More Results
               </Button>
